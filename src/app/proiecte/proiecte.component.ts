@@ -11,6 +11,7 @@ export class ProiecteComponent implements OnInit {
   
   ngOnInit(): void {
     this.mybutton = document.getElementById('redirectTop');
+    this.topFunction();
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {

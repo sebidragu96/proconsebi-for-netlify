@@ -14,8 +14,10 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
       .btnDiv { display: none;  }
+      #iframe-indisponibil-id { display: none; }
+      #google-frame-id { display: block; }
   }
-  
+
 
 @-webkit-keyframes opacityZeroToTen {
     0% {

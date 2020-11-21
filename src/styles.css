@@ -51,6 +51,15 @@
     height: 80vh;
   }
 
+  .bg-image-primary-building-main {
+    background: url('./assets/contact-photo.jpg') 0% no-repeat;
+    background-size: cover;
+    background-color: #f7f7f7;
+    background-attachment: fixed;
+    background-position: center;
+    height: 120vh;
+  }
+
   .main-image {
     background: url('./assets/poza_principala.jpg') 0% no-repeat;
     background-size: cover;
@@ -73,6 +82,10 @@ and (max-device-width: 768px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) { 
   .bg-vizualizare { background-size: cover; background-position: center; }
+  .btn-main-page { display: none; }
+  .btn-vezi-pe-maps { display: none; }
+  #iframe-indisponibil-id { display: none; }
+  #google-frame-id { display: block; }
 }
 
   @media screen and (min-width: 768px) {
@@ -140,6 +153,9 @@ and (orientation: landscape) {
   .font-text3 { font-size: 16px; }
   .font-text4 { font-size: 30px; }
   .font-text-xs { font-size: 16px; }
+  .bg-image-primary-building-main {
+    height: 120vh;
+  }
 }
 @media screen and (min-width: 992px) {
   .font-text { font-size: 16px; }

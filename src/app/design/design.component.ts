@@ -11,6 +11,7 @@ export class DesignComponent implements OnInit {
 
   ngOnInit(): void {
     this.mybutton = document.getElementById('redirectTopDesign');
+    this.topFunctionDesign();
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {

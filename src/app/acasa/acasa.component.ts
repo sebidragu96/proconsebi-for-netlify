@@ -10,15 +10,10 @@ export class AcasaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (window.innerWidth < 591) {
-      this.mobileResolution = true;
-    }
-    else {
-      this.mobileResolution = false;
-    }
+    this.setImageHeightOnLoading();
   }
   setImageHeightOnLoading() {
-    if (window.innerWidth < 591) {
+    if (window.innerWidth < 592) {
       this.mobileResolution = true;
     }
     else {

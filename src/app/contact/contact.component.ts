@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.contactImage = document.getElementById('background-img-contact');
     this.contactImageLowScale = document.getElementById('contact-container-lowscale');
+    this.topFunction();
     
     this.setImageHeightOnLoading();
 
@@ -74,6 +75,19 @@ export class ContactComponent implements OnInit {
       this.contactImage.style.display = 'none';
     }
   }
+
+    // cand se da click pe butonul redirectTop
+    topFunction() {
+      this.scrollToTop();
+    }
+  
+     scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(this.scrollToTop);
+        window.scrollTo(0, c - c / 8);
+      }
+    };
 
   @HostListener("window:resize", ['$event']) onWindowResize() {
     this.setImageHeightOnLoading();
