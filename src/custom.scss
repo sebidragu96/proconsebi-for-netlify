@@ -1,0 +1,81 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$proconsebi-primary: mat-palette($mat-indigo);
+$proconsebi-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$proconsebi-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$proconsebi-theme: mat-light-theme((
+  color: (
+    primary: $proconsebi-primary,
+    accent: $proconsebi-accent,
+    warn: $proconsebi-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($proconsebi-theme);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.bg-black  { background-color: var(--black) }
+.bg-gray   { background-color: var(--gray) }
+.bg-silver { background-color: var(--silver) }
+.bg-white  { background-color: var(--white) }
+
+.bg-aqua  { background-color: var(--aqua) }
+.bg-blue  { background-color: var(--blue) }
+.bg-navy  { background-color: var(--navy) }
+.bg-teal  { background-color: var(--teal) }
+.bg-green { background-color: var(--green) }
+.bg-olive { background-color: var(--olive) }
+.bg-lime  { background-color: var(--lime) }
+
+.bg-yellow  { background-color: var(--yellow) }
+.bg-orange  { background-color: var(--orange) }
+.bg-red     { background-color: var(--red) }
+.bg-fuchsia { background-color: var(--fuchsia) }
+.bg-purple  { background-color: var(--purple) }
+.bg-maroon  { background-color: var(--maroon) }
+
+.bg-darken-1 { background-color: var(--darken-1) }
+.bg-darken-2 { background-color: var(--darken-2) }
+.bg-darken-3 { background-color: var(--darken-3) }
+.bg-darken-4 { background-color: var(--darken-4) }
+
+.bg-lighten-1 { background-color: var(--lighten-1) }
+.bg-lighten-2 { background-color: var(--lighten-2) }
+.bg-lighten-3 { background-color: var(--lighten-3) }
+.bg-lighten-4 { background-color: var(--lighten-4) }
+
+
+p {
+	letter-spacing: .1em;
+    display: inline-block;
+    text-align: center;
+	border: 4px double #101820DF;
+  
+  span {
+  	letter-spacing: 0;
+	  display: inline-block;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+    }
+}

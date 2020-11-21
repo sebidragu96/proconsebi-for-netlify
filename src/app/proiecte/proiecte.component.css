@@ -1,0 +1,98 @@
+  .parallax, .parallax2 {
+      background-image: url("../../assets/casa-lac/principal.jpg");
+      height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+
+  .parallax3, .parallax4 {
+    background-image: url("../../assets/casa-lac/interior1.jpg");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .parallax5, .parallax6 {
+    background-image: url("../../assets/casa-lac/secundar.jpg");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .parallax7, .parallax8 {
+    background-image: url("../../assets/bloc-mamaia-nord/bloc_zi.jpg");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #redirectTop { /* Butonul care se afiseaza sub 1200px (rezolutie de telefon/ tableta); apare atunci cand se da scroll in jos si 
+    redirectioneaza catre top */
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .setMargin5 { margin: 50px; }
+
+  /* Se opreste efectul parallax scrolling pentru orice dispozitiv cu rezolutie sub 1200 */
+  @media only screen and (max-width: 1200px) {
+    .parallax, .parallax3, .parallax5, .parallax7 {
+      background-attachment: scroll;
+    }
+    .parallax2, .parallax4, .parallax6, .parallax8 {
+      display: none;
+    }
+  }
+
+   @media only screen and (max-width: 768px) {
+    .parallax, .parallax3, .parallax5, .parallax7 {
+      background-size: contain;
+    }
+    .setMargin5 {
+      margin: 15px;
+    }
+  }
+
+
+@media only screen and (min-width: 1200px) {
+  .parallax, .parallax2, .parallax3, .parallax4, .parallax5, .parallax6, .parallax7, .parallax8 {
+    background-size: 75%;
+    background-position-x: center;
+    background-position-y: center;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .parallax, .parallax2, .parallax3, .parallax4, .parallax5, .parallax6, .parallax7, .parallax8 {
+    height: 550px;
+  }
+}
+
+.effectImg {
+  overflow-x: hidden;
+  animation: delayImages 1s;
+}
+
+@keyframes delayImages {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

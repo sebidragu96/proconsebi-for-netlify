@@ -1,0 +1,19 @@
+  .container {  margin: 0;  }
+
+  @-webkit-keyframes fadeIn { 
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .fadein-effect div { 
+    display: block;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  } /* efectul de intarziere a textului din footer are loc la prima incarcare a site-ului (cand se schimba paginile nu functioneaza) */

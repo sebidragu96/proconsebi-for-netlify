@@ -1,0 +1,90 @@
+<div id='background-img-contact' class="bg-image-primary-building">
+  <h1 id="contact-container" class="text-center font-text4 bg-image3 text-light pt-3 pb-3">CONTACT</h1>
+</div>
+<h1 id="contact-container-lowscale" class="text-center font-text4 bg-image3 text-light pt-3 pb-3">CONTACT</h1>
+<section class="pl-3 pr-3">
+
+<mat-selection-list id='date-de-contact' [multiple]="false">
+    <span class="font-text font-weight-bold">Date de contact :</span>
+    <mat-list-option>
+            <p class="border-0 text-left"><img class="phone-img ml-3 mr-3"><span class="font-text-xs">0723.317.311</span></p>
+        </mat-list-option>
+            <mat-list-option>
+              <a href="mailto:dragu.otilia@yahoo.com" class="text-dark"><img class="email-img ml-3 mr-3"><p class="border-0 font-text-xs text-left"><span class="font-text-xs">Trimite email</span></p></a>
+          </mat-list-option>
+  </mat-selection-list>
+  <hr class="bg-dark" style="opacity: .1;" />
+        
+</section>
+
+<section id="program-lucru-section" class="pl-3 pr-3">
+
+<table class="table table-borderless table-sm efect-slide-from-left">
+    <thead class="bg-image text-light">
+      <tr>
+        <th scope="col" class="w-25 font-text3 font-weight-bold">Zi</th>
+        <th scope="col" class="w-25 font-text3 font-weight-bold">Program de lucru</th>
+        <th class="w-25"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <ng-container *ngFor="let obiect of zile">
+
+      <tr [ngClass] = "{'table-active' : obiect.zi === getZiCurenta()}">
+
+        <th scope="row" class="font-text3">{{ obiect.zi }}</th>
+        <td class="font-text3">{{ obiect.program }}</td>
+
+        <div *ngIf="getOre() >= 9 && getOre() < 16 &&  
+                    obiect.zi !== 'Sâmbătă' && 
+                    obiect.zi !== 'Duminică' 
+                    then deschisBlock 
+                    else inchisBlock">
+        </div>
+        <ng-template #deschisBlock>
+            <td class=" btn-success active text-center font-text-xs"
+                [ngClass] = "{'d-none' : obiect.zi !== getZiCurenta()}"> 
+                Deschis acum
+            </td>
+        </ng-template>
+
+        <ng-template #inchisBlock>
+            <td class=" btn-danger active text-center font-text-xs"
+                [ngClass] = "{'d-none' : obiect.zi !== getZiCurenta()}"> 
+                Inchis acum
+            </td>
+        </ng-template>
+
+      </tr>
+
+    </ng-container>
+    </tbody>
+
+  </table>
+
+</section>
+<br />
+
+<div class="bottom-img-info">
+  <br />
+<br /><br />
+
+  <br />
+  <div class="pl-3 pr-3">
+    <a href="https://www.facebook.com/Pro-Consebi-SRL-192836364067166" target="_blank" class="float-right"> <!-- Facebook Icon -->
+      <div id='facebook-icon'>&nbsp;</div><br />
+    </a>
+    <p class="border-0 font-text3 font-weight-bolder text-left bg-color-for-item-footer btn-block">
+      <img class="adress-img ml-3 mr-3 pt-2 pb-2 mb-1"> strada Mihai Viteazu nr. 69A, Constanța
+    </p>
+  </div>
+  
+  <br />
+
+  <a class="font-text3 ml-3 btn btn-dark w-50" routerLink='/vizualizare'>
+    Vezi locatie
+  </a>
+  <br /><br /><br />
+  <br /><br /><br />
+</div>

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');  
+  
+  html {
+    background-color: #f7f7f7;
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px; /* 60px -> inaltimea footer-ului */
+    overflow-x: hidden;
+  }
+
+  .bg-color-for-body {  background-color: #f7f7f7;  }
+
+  .footer {
+    bottom: 0;
+    width: 100%;
+    line-height: 60px;
+    position: absolute;
+  }
+
+  body::-webkit-scrollbar { width: 1em; }
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px transparent;
+    background-color: transparent;
+  }
+  body::-webkit-scrollbar-thumb { background-color: #101820FF; }
+  
+  .bg-image {
+    background: linear-gradient(to bottom, #101820FF 100%, transparent);
+    opacity: 0.99;
+    filter: alpha(opacity=99); 
+  }
+  .bg-image2 {
+    opacity: 0.80;
+    filter: alpha(opacity=80); 
+  }
+  .bg-image3 {
+    background: linear-gradient(to bottom, #101820FF 25%, #101820FF 75%, #101820FF 100%);
+    opacity: 0.60;
+    filter: alpha(opacity=60); 
+    mix-blend-mode: hard-light; 
+  }
+
+  .bg-image-primary-building {
+    background: url('./assets/contact-photo.jpg') 0% no-repeat;
+    background-size: contain;
+    background-color: #f7f7f7;
+    background-attachment: fixed;
+    background-position: top;
+    height: 80vh;
+  }
+
+  .main-image {
+    background: url('./assets/poza_principala.jpg') 0% no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: #f7f7f7;
+    height: 110vh;
+  }
+
+  .bg-vizualizare {
+    background: url('./assets/sediu.PNG') 0% no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-color: #f7f7f7;  
+    height: 50vh;
+  }
+
+  /* Landscape */
+@media only screen 
+and (max-device-width: 768px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+  .bg-vizualizare { background-size: cover; background-position: center; }
+}
+
+  @media screen and (min-width: 768px) {
+    .main-image {
+      background: url('./assets/poza_principala.jpg') 0% no-repeat;
+      background-size: cover;
+      background-position: top;
+      background-color: #f7f7f7;
+      height: 160vh;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .main-image {
+      background: url('./assets/poza_principala.jpg') 0% repeat-x;
+      background-size: cover;
+      background-position: top;
+      background-color: #f7f7f7;
+      height: 110vh;
+    }
+  }
+
+
+.font-text, .font-text2 { font-family: 'Vidaloka', serif; }
+.font-text3, .font-text4, .font-text-xs { font-family: 'Pragati Narrow', sans-serif; }
+
+
+@media screen and (min-width: 1400px){
+  .bg-image-primary-building {
+    background: url('./assets/contact-photo.jpg') 0% no-repeat;
+    background-size: cover;
+    background-color: #f7f7f7;
+    background-attachment: fixed;
+    background-position: top;
+    height: 80vh;
+  }
+  .bottom-img-info {
+    background-image: url('./assets/contact-photo.jpg');
+    background-size: cover;
+    background-color: #f7f7f7;
+    background-attachment: fixed;
+    background-position: top;
+  }
+}
+
+
+/* START -- MEDIA PENTRU MARIMEA FONTULUI -- */
+@media screen and (max-width: 576px) {
+  .font-text { font-size: 13px; }
+  .font-text2 { font-size: 15px; }
+  .font-text3 { font-size: 14px; }
+  .font-text4 { font-size: 24px; }
+  .font-text-xs { font-size: 13px; }
+}
+@media screen and (min-width: 576px) {
+  .font-text { font-size: 14px; }
+  .font-text2 { font-size: 17px; }
+  .font-text3 { font-size: 15px; }
+  .font-text4 { font-size: 27px; }
+  .font-text-xs { font-size: 15px; }
+}
+@media screen and (min-width: 768px) {
+  .font-text { font-size: 15px; }
+  .font-text2 { font-size: 18px; }
+  .font-text3 { font-size: 16px; }
+  .font-text4 { font-size: 30px; }
+  .font-text-xs { font-size: 16px; }
+}
+@media screen and (min-width: 992px) {
+  .font-text { font-size: 16px; }
+  .font-text2 { font-size: 20px; }
+  .font-text3 { font-size: 17px; }
+  .font-text4 { font-size: 33px; }
+  .font-text-xs { font-size: 18px; }
+}
+@media screen and (min-width: 1200px) {
+  .font-text { font-size: 17px; }
+  .font-text2 { font-size: 20px; }
+  .font-text3 { font-size: 18px; }
+  .font-text4 { font-size: 36px; }
+  .font-text-xs { font-size: 18px; }
+}
+/* END -- MEDIA PENTRU MARIMEA FONTULUI -- */
+
+
+.nav div.main_list ul {
+  width: 100%;
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-item{
+      background-color: transparent;
+  }
+  .nav {
+      background-color: #101820;
+      display: block; 
+  }
+}
+@media screen and (min-width: 767px) {
+  .item-contact {
+      position: absolute;
+      right: 50px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .navTrigger {
+      display: block;
+  }
+  .nav div.main_list {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+  }
+  .nav div.show_list {
+      height: auto;
+      display: none;
+  }
+  .nav div.main_list ul {
+      width: 100%;
+      height: 100vh;
+      right: 0;
+      left: 0;
+      bottom: 0;
+  }
+  .nav div.main_list ul li {
+      width: 100%;
+      text-align: right;
+  }
+  .nav div.main_list ul li a {
+      text-align: center;
+      width: 100%;
+      font-size: 3rem;
+      padding: 20px;
+  }
+  .nav div.media_button {
+      display: block;
+  }
+}
+
+.navbar {
+  position: relative;
+  margin: 0 auto;
+}
+.navbar-toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  background-color: #f7f7f7;
+  border-color: transparent; /* Whatever Colour you want */
+}
+.navbar:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  content: '';
+}
+.nav {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#navbar-bottom {
+  background: linear-gradient(#000 0%, #101820FF 100%);
+  line-height: 0.7em;
+}
+
+.text-shadow {
+text-shadow:  0 0px 0 #fff, 
+              0 0.5px 0 #f7f7f7,
+              0 1px 1px rgba(0,0,0,.1),
+              0 1px 3px rgba(0,0,0,.2),
+              0 2px 2px rgba(0,0,0,.2),
+              0 6px 6px rgba(0,0,0,.15);
+}
+
+.effectImg {
+  overflow-x: hidden;
+  animation: delayImages 1s;
+}
+
+@keyframes delayImages {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

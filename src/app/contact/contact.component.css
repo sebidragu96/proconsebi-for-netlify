@@ -1,0 +1,140 @@
+th{ font-weight: normal;  }
+
+@-webkit-keyframes opacityZeroToNine {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .9;
+    }
+}
+
+@keyframes opacityZeroToNine {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .9;
+    }
+}
+
+@-webkit-keyframes opacityZeroToSix{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .6;
+    }
+}
+
+@keyframes opacityZeroToSix {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .6;
+    }
+}
+
+#contact-container {
+    animation: 1s ease-out 0s 1 opacityZeroToSix;
+}
+
+#date-de-contact {
+    animation: 1s ease-out 0s 1 opacityZeroToNine;
+}
+
+  @-webkit-keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.fb-icon {
+    content: url('../../assets/iconmonstr-facebook-6-240.png');
+    width: 104px;
+}
+
+@media screen and (max-width: 768px){
+    .efect-slide-from-left { animation: 0.5s forwards 0s 1 slideInFromLeft; }
+}
+
+  /* Landscape */
+  @media only screen 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+      #background-img-contact { display: none; }
+      .contact-container-lowscale { display: block; }
+  }
+  
+
+
+img.adress-img {
+    content: url('../../assets/adress.png');
+    width: 20px;
+}
+img.email-img {
+    content: url('../../assets/mail.png');
+    width: 20px;
+}
+img.phone-img {
+    content: url('../../assets/phone.png');
+    width: 20px;
+}
+
+#facebook-icon {
+    background: #3C5695;
+    text-indent: -999em;
+    width: 100px;
+    height: 110px;
+    box-sizing: content-box;
+    position: relative;
+    overflow: hidden;
+    border: 15px solid #3C5695;
+    border-bottom: 0;
+  }
+  #facebook-icon:before {
+    content: "/20";
+    position: absolute;
+    background: #3C5695;
+    width: 40px;
+    height: 90px;
+    bottom: -30px;
+    right: -37px;
+    border: 20px solid #f7f7f7;
+    border-radius: 25px;
+    box-sizing: content-box;
+  }
+  #facebook-icon:after {
+    content: "/20";
+    position: absolute;
+    width: 55px;
+    top: 50px;
+    height: 20px;
+    background: #f7f7f7;
+    right: 5px;
+    box-sizing: content-box;
+  }
+
+  @media screen and (min-width: 1400px){
+  .bg-color-for-item-footer {
+    background: linear-gradient(to right, #f7f7f7 25%, #f7f7f7 50%, transparent 75%);
+  }
+}
+
+@media screen and (max-width: 576px){
+    #facebook-icon {  width: 67px; }
+}
