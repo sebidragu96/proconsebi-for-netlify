@@ -73,10 +73,14 @@
     .hide-bigres {
         display: block;
     }
+}
+
+@media screen and (max-height: 591px) {
     .btn-main-page {
         display: none;
     }
 }
+
 
 @media screen and (min-width: 592px) {
     .hide-bigres {
