@@ -22,8 +22,8 @@
 <table class="table table-borderless table-sm efect-slide-from-left">
     <thead class="bg-image text-light">
       <tr>
-        <th scope="col" class="w-25 font-text3 font-weight-bold">Zi</th>
-        <th scope="col" class="w-25 font-text3 font-weight-bold">Program de lucru</th>
+        <th scope="col" class="w-25 font-text3 font-weight-bold text-center p-2">Zi</th>
+        <th scope="col" class="w-30 font-text3 font-weight-bold text-center p-2">Program de lucru</th>
         <th class="w-25"></th>
       </tr>
     </thead>
@@ -33,8 +33,8 @@
 
       <tr [ngClass] = "{'table-active' : obiect.zi === getZiCurenta()}">
 
-        <th scope="row" class="font-text3">{{ obiect.zi }}</th>
-        <td class="font-text3">{{ obiect.program }}</td>
+        <th scope="row" class="font-text3 text-center">{{ obiect.zi }}</th>
+        <td class="font-text3 text-center">{{ obiect.program }}</td>
 
         <div *ngIf="getOre() >= 9 && getOre() < 16 &&  
                     obiect.zi !== 'Sâmbătă' && 
@@ -82,7 +82,7 @@
   
   <br />
 
-  <a class="font-text3 ml-3 btn btn-dark text-light w-50" routerLink='/vizualizare'>
+  <a class="font-text3 ml-3 btn btn-dark text-light w-30" routerLink='/vizualizare'>
     Vezi locatie
   </a>
   <br /><br /><br />

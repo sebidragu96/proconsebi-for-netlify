@@ -129,6 +129,10 @@ img.phone-img {
     box-sizing: content-box;
   }
 
+  .w-30 {
+      width: 30%;
+  }
+
   @media screen and (min-width: 1400px){
   .bg-color-for-item-footer {
     background: linear-gradient(to right, #f7f7f7 25%, #f7f7f7 50%, transparent 75%);

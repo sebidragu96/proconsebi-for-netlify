@@ -286,6 +286,11 @@ text-shadow:  0 0px 0 #fff,
   animation: delayImages 1s;
 }
 
+.effectBtnTop {
+  overflow-x: hidden;
+  animation: delayImages 2s;
+}
+
 @keyframes delayImages {
   0% {
     opacity: 0;
