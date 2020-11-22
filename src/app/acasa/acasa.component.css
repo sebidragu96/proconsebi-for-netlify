@@ -73,6 +73,9 @@
     .hide-bigres {
         display: block;
     }
+    .btn-main-page {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 592px) {
