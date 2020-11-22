@@ -88,6 +88,16 @@ and (orientation: landscape) {
   #google-frame-id { display: block; }
 }
 
+@media only screen 
+and (max-device-width: 992px) 
+and (orientation: landscape) { 
+  .bg-vizualizare { background-size: cover; background-position: center; }
+  .btn-main-page { display: none; }
+  .btn-vezi-pe-maps { display: none; }
+  #iframe-indisponibil-id { display: none; }
+  #google-frame-id { display: block; }
+}
+
   @media screen and (min-width: 768px) {
     .main-image {
       background: url('./assets/poza_principala.jpg') 0% no-repeat;
