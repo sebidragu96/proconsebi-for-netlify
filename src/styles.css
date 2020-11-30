@@ -8,6 +8,7 @@
   body {
     margin-bottom: 60px; /* 60px -> inaltimea footer-ului */
     overflow-x: hidden;
+    min-height:100%;
   }
 
   .bg-color-for-body {  background-color: #f7f7f7;  }

@@ -38,7 +38,8 @@
 
         <div *ngIf="getOre() >= 9 && getOre() < 16 &&  
                     obiect.zi !== 'Sâmbătă' && 
-                    obiect.zi !== 'Duminică' 
+                    obiect.zi !== 'Duminică' &&
+                    !esteSarbatoare()
                     then deschisBlock 
                     else inchisBlock">
         </div>
@@ -52,7 +53,7 @@
         <ng-template #inchisBlock>
             <td class=" btn-danger active text-center font-text-xs"
                 [ngClass] = "{'d-none' : obiect.zi !== getZiCurenta()}"> 
-                Inchis acum
+                {{ contentInchisDiv }}
             </td>
         </ng-template>
 

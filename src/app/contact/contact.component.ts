@@ -11,9 +11,12 @@ export class ContactComponent implements OnInit {
   contactImage: HTMLElement;
   contactImageLowScale: HTMLElement;
   width: number;
+  contentInchisDiv: string;
 
-  constructor() { }
-
+  constructor() { 
+    this.contentInchisDiv = this.esteSarbatoare() ? "Inchis de sarbatori" :  "Inchis acum";
+  }
+  
   ngOnInit(): void {
     this.contactImage = document.getElementById('background-img-contact');
     this.contactImageLowScale = document.getElementById('contact-container-lowscale');
@@ -51,6 +54,31 @@ export class ContactComponent implements OnInit {
     var d = new Date();
     var n = d.getHours();
     return n;
+  }
+
+  esteSarbatoare(): boolean {
+    var d = new Date();
+    switch (d.toLocaleDateString('en-US'))
+    {
+      case '11/30/2020':  /* Sfantul Andrei                     */
+      case '12/1/2020':   /* Ziua Nationala a Romaniei          */
+      case '12/25/2020':  /* Craciunul (ziua 1)                 */
+      case '12/26/2020':  /* Craciunul (ziua 2)                 */
+      case '1/1/2020':    /* Anul Nou (ziua 1)                  */
+      case '1/2/2020':    /* Anul Nou (ziua 2)                  */
+      case '1/24/2020':   /* Ziua Unirii Principatelor Romane   */
+      case '4/17/2020':   /* Vinerea Mare                       */
+      case '4/19/2020':   /* Paste ortodox (ziua 1)             */
+      case '4/20/2020':   /* Paste ortodox (ziua 2)             */
+      case '5/1/2020':    /* Ziua Muncii                        */ 
+      case '6/1/2020':    /* Ziua Copilului                     */
+      case '6/7/2020':    /* Rusalii (ziua 1)                   */
+      case '6/8/2020':    /* Rusalii (ziua 2)                   */ 
+      case '8/15/2020':   /* Adormirea Maicii Domnului          */
+        return true;
+      default:
+        return false;
+    }
   }
 
   setImageHeightOnLoading() {
